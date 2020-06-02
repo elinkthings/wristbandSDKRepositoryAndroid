@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_connect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="connect"
+                    />
+
+
+                <Button
+                    android:id="@+id/button_dis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="disconnect"
+                    tools:layout_editor_absoluteX="281dp"
+                    tools:layout_editor_absoluteY="40dp"/>
+
+                <Button
+                    android:id="@+id/button_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    tools:layout_editor_absoluteX="281dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+                <Button
+                    android:id="@+id/button_ota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OTA"
+                    tools:layout_editor_absoluteX="281dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SynTime"
+                    />
+
+
+                <Button
+                    android:id="@+id/button_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get status"
+                    tools:layout_editor_absoluteX="281dp"
+                    tools:layout_editor_absoluteY="40dp"/>
+
+                <Button
+                    android:id="@+id/button_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get Info"
+                    tools:layout_editor_absoluteX="281dp"
+                    tools:layout_editor_absoluteY="40dp"/>
+
+                <Button
+                    android:id="@+id/button_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get log"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/button_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shut down"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+                <Button
+                    android:id="@+id/button_activation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="activation"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+                <Button
+                    android:id="@+id/button_close_activation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear activation"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/button_bind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Binding"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+                <Button
+                    android:id="@+id/button_reboot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="reboot"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+                <Button
+                    android:id="@+id/button_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="version"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bm"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_set_user"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:digits="0123456789"
+                    android:hint="userId"
+                    android:text="1"
+                    />
+
+                <EditText
+                    android:id="@+id/et_set_user_status"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:digits="0123456789"
+                    android:hint="status"
+                    android:maxLength="1"
+                    android:text="0"
+                    />
+
+                <Button
+                    android:id="@+id/button_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="set User"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="41dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Near the alarm threshold:"
+                    />
+
+                <com.elinkthings.wristbanddemo.view.SeekBarMin
+                    android:id="@+id/seekBar1"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="阀值"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Threshold times received:"
+                    />
+
+                <com.elinkthings.wristbanddemo.view.SeekBarMin
+                    android:id="@+id/seekBar2"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="阀值"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Breakaway alarm time:"
+                    />
+
+                <com.elinkthings.wristbanddemo.view.SeekBarMin
+                    android:id="@+id/seekBar3"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="阀值"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Breakaway alarm times:"
+                    />
+
+                <com.elinkthings.wristbanddemo.view.SeekBarMin
+                    android:id="@+id/seekBar4"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="阀值"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gsensor sensitivity:"
+                    />
+
+                <com.elinkthings.wristbanddemo.view.SeekBarMin
+                    android:id="@+id/seekBar5"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="阀值"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Offline time when Gsensor does not move:"
+                    />
+
+                <com.elinkthings.wristbanddemo.view.SeekBarMin
+                    android:id="@+id/seekBar6"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="阀值"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Motor vibration time:"
+                    />
+
+                <com.elinkthings.wristbanddemo.view.SeekBarMin
+                    android:id="@+id/seekBar7"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/text7"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="阀值"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                >
+
+                <Button
+                    android:id="@+id/button_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Setting parameters"
+                    tools:layout_editor_absoluteX="281dp"
+                    tools:layout_editor_absoluteY="120dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        >
+
+
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+
+    <TextView
+            android:id="@+id/tv_hint_data_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="确定移除家人?"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+    />
+
+
+    <TextView
+            android:id="@+id/tv_hint_data_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="移除后所有数据清空"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+    />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/black"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+    >
+
+        <TextView
+                android:id="@+id/tv_hint_data_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="取消"
+                android:textSize="18dp"
+        />
+
+        <View
+                android:id="@+id/view_cancel_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+        />
+
+        <TextView
+                android:id="@+id/tv_hint_data_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="ok"
+                android:textSize="18dp"
+        />
+
+
+    </LinearLayout>
+
+</LinearLayout>
