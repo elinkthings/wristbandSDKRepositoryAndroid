@@ -268,6 +268,10 @@ public class HealthBraceletDevice extends BaseBleDeviceData {
     }
 
 
+    /**
+     * 获取设备参数
+     * Get device parameters
+     */
     public void getDeviceParameter() {
         SendMcuBean sendMcuBean = new SendMcuBean();
         byte[] data = new byte[2];

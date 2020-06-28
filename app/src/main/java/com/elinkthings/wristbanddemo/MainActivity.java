@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.elinkthings.wristbanddemo.utils.MyFileUtils;
 import com.elinkthings.wristbanddemo.utils.SP;
 import com.pingwang.bluetoothlib.AILinkSDK;
+import com.pingwang.bluetoothlib.utils.BleLog;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        BleLog.init(true);
         AILinkSDK.getInstance().init(this,"845ce4ad167cc100","00f0e4a024b05089ac6a863478");
        TextView mTvVersion= findViewById(R.id.tv_version);
         String version = "";

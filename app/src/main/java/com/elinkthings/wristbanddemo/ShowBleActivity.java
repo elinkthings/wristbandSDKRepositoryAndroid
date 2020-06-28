@@ -23,6 +23,8 @@ import com.pingwang.bluetoothlib.listener.CallbackDisIm;
 import com.pingwang.bluetoothlib.listener.OnCallbackBle;
 import com.pingwang.bluetoothlib.listener.OnScanFilterListener;
 import com.pingwang.bluetoothlib.server.ELinkBleServer;
+import com.pingwang.bluetoothlib.utils.BleLog;
+import com.pingwang.bluetoothlib.utils.BleStrUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +39,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * 2020/5/6<br>
  * java类作用描述
  */
-public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle,
-        OnScanFilterListener {
+public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle, OnScanFilterListener {
 
     private static String TAG = ShowBleActivity.class.getName();
 
@@ -152,7 +153,6 @@ public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle,
         });
 
 
-
     }
 
 
@@ -204,8 +204,18 @@ public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle,
         if (!mList.contains(mAddress + "=" + data.getName())) {
             mList.add(mAddress + "=" + data.getName());
             listAdapter.notifyDataSetChanged();
-        }
 
+        }
+        List<byte[]> manufacturerDataList = data.getManufacturerDataList();
+        if (manufacturerDataList == null || manufacturerDataList.isEmpty()) {
+            return;
+        }
+        byte[] data1 =manufacturerDataList.get(0);
+        byte[] data2 =null;
+        if (manufacturerDataList.size()>1){
+            data2=manufacturerDataList.get(1);
+        }
+        BleLog.i(TAG, "设备地址||厂商数据:" + data.getMac() + "||" + BleStrUtils.byte2HexStr(data1) + "||" + BleStrUtils.byte2HexStr(data2));
 
     }
 
@@ -240,12 +250,12 @@ public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle,
 
     @Override
     public void bleClose() {
-        Toast.makeText(this,"Bluetooth is not turned on",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Bluetooth is not turned on", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public boolean onFilter(BleValueBean bleValueBean) {
-            return true;
+        return true;
 
     }
 
