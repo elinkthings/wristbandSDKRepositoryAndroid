@@ -206,6 +206,8 @@ public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle,
             listAdapter.notifyDataSetChanged();
 
         }
+
+
         List<byte[]> manufacturerDataList = data.getManufacturerDataList();
         if (manufacturerDataList == null || manufacturerDataList.isEmpty()) {
             return;
@@ -215,8 +217,27 @@ public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle,
         if (manufacturerDataList.size()>1){
             data2=manufacturerDataList.get(1);
         }
-        BleLog.i(TAG, "设备地址||厂商数据:" + data.getMac() + "||" + BleStrUtils.byte2HexStr(data1) + "||" + BleStrUtils.byte2HexStr(data2));
+        BleLog.i(TAG, "设备地址||厂商数据:" + data.getMac() + "||" + BleStrUtils.byte2HexStr(data1) + "||" + getMacAddress(data2).toUpperCase());
 
+    }
+
+
+    private String getMacAddress(byte[] macByte){
+        StringBuilder hs = new StringBuilder();
+        for(int i = macByte.length-1; i >=0;i--) {
+            byte aB = macByte[i];
+            int a = aB & 0xFF;
+            String stmp = Integer.toHexString(a);
+            if (stmp.length() == 1) {
+                hs.append("0").append(stmp);
+            } else {
+                hs.append(stmp);
+            }
+            hs.append(":");
+        }
+        if (hs.length()>0)
+            hs.deleteCharAt(hs.length()-1);
+        return hs.toString();
     }
 
 
