@@ -183,6 +183,9 @@ public class ShowBleActivity extends AppCompatActivity implements OnCallbackBle,
                 mBluetoothService.setOnCallback(ShowBleActivity.this);
                 mBluetoothService.setOnScanFilterListener(ShowBleActivity.this);
                 mHandler.sendEmptyMessage(BIND_SERVER_OK);
+                mBluetoothService.initForegroundService(1,R.mipmap.ic_launcher,"start Foreground service",MainActivity.class);
+                mBluetoothService.startForeground();//启动前台服务
+//                mBluetoothService.stopForeground();//停止前台服务
             }
         }
 
